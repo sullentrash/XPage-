@@ -18,5 +18,6 @@ inference.py - модуль для классификации изображен
 https://drive.google.com/file/d/1aq_R5Zi55r9tUGcMMD3ahZO7OVgNN4QE/view?usp=share_link
 
 Для запуска проекта необходимо создать папки /website/static и /website/weights
-И поместить в папку /website/weights загруженные веса
-Запуск осущесвтляется через терминал python: uvicorn dynamic:app --reload
+И поместить в папку /website/weights загруженные веса.
+
+Запуск осуществляется через терминал python: uvicorn dynamic:app --reload
