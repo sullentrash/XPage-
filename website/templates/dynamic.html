@@ -1,0 +1,39 @@
+﻿<html>
+    <head>
+        <title>TestTask</title>
+    </head>
+    <style type="text/css">
+        body {
+            background-image: linear-gradient(rgb(255, 235, 179), rgb(204, 255, 204));
+        }
+        form {
+            text-align: center;
+        }
+        img{
+            max-width:450px;
+            max-height:600px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        #center { text-align: center; }   
+    </style>
+    <body>
+    <form action="/dynamic" enctype="multipart/form-data" method="POST">
+        <input name="file" type="file" size="16"/>
+        <input type="submit" size="16"/>
+    </form>
+
+    {% if img %}
+        <h1 id = "center">Животное на фотографии:</h1>
+        <h1 id = "center">{{ label }}</h1>
+        <img src="data:image/jpeg;base64,{{ img }}" class="center"/>
+    {% else %}
+        <h1 id = "center">Определить изображена на фотографии кошка или собака</h1>
+        <h1 id = "center">Изображение будет отрисовано здесь...</h1>
+    {% endif %}
+    </body>
+</html>

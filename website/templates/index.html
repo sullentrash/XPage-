@@ -1,0 +1,9 @@
+﻿<html>
+    <head>
+        <link href="{{ url_for('static') }}" />
+        <title>Serving Image Files Using FastAPI</title>
+    </head>
+    <body>
+        <img src="{{ url_for('static', path='assets/GP.png') }}" />
+    </body>
+</html>
